@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AES Encryption and Decryption</title>
+</head>
+<body>
+<h2>Decrypt Data</h2>
+    <form method="POST" action="/decrpt">
+        <label for="ciphertext">Enter ciphertext:</label>
+        <input type="text" name="ciphertext">
+        <br>
+        <input type="submit" value="Decrypt">
+    </form>
+
+    {% if plaintext %}
+    <h3>Result:</h3>
+    <p>{{ plaintext }}</p>
+    {% endif %}
+</body>
+</html>      

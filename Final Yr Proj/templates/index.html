@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AES Encryption and Decryption</title>
+</head>
+<body>
+    <h1>AES Encryption and Decryption</h1>
+
+    <h2>Encrypt Data</h2>
+    <form method="POST" action="/encrypt">
+        <label for="plaintext">Enter plaintext:</label>
+        <input type="text" name="plaintext">
+        <br>
+        <input type="submit" value="Encrypt">
+    </form>
+
+    {% if ciphertext %}
+    <h3>Result:</h3>
+    <p>{{ ciphertext }}</p>
+    {% endif %}
+
+    <hr>
+
+    <h2>Decrypt Data</h2>
+    <form method="POST" action="/decrypt">
+        <a href ="decrypt.html">
+        <button type="submit" class="btn btn-warning" style="color:rgb();">Decrypt Data</button></a>
+    </form>
+
+    {% if plaintext %}
+    <h3>Result:</h3>
+    <p>{{ plaintext }}</p>
+    {% endif %}
+</body>
+</html>
+ 

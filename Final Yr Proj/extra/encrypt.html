@@ -1,0 +1,51 @@
+<br><br>
+<style>
+  body {
+     background-image: url("https://blog.zoom.us/wp-content/uploads/2020/04/2-1820x910.png"); /*static/encp.png*/
+     background-repeat: no-repeat;
+     background-size: cover;  
+     font-size: 120%;
+  }
+</style>
+<div class="jumbotron jumbotron-fluid bg-dark text-white">
+  <div class="container">
+    <h1 class="display-4" style="color:rgb(17, 110, 255);"><center>Welcome To the Encrypter <i class="fas fa-home"></i>  !!!</center></h1>
+    <p class="lead">
+    	<center style="color:rgb(0, 255, 255);">
+    		<i class="fas fa-eye-slash"></i> Feel free to encrypt any text you like trust us It will be confidential.
+    	</center>
+	</p>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid " style="width:500px ;margin:auto;">
+  <div class="container">
+    <h1 class="display-4"><center style="color:rgb(255, 208, 0);"><b>ENCRYPTION</b></center></h1>
+    <p class="lead">
+    	<center> 			
+        <form method="POST" action="/encrypt">
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label" style="color:rgb(0, 255, 255);">Enter Your Text</label><br><br>
+            <textarea name="PLAIN_TEXT" class="form-control is-invalid" id="validationTextarea" placeholder="Please Enter Your Text Here..." required="" autofocus="" style="width: 300px; height:150px;"></textarea><br>
+            <br>
+          </div>
+          {% comment %} <div class="mb-3">
+            <label for="validationTextarea" class="form-label" style="color:rgb(0, 255, 255);">Enter Your Secret Key</label><br><br>
+            <input type="password" name="SECRET_KEY" class="form-control is-invalid" id="validationTextarea" placeholder="Please Type Your Secret Key Here..." required="" autofocus="" style="width: 300px;"><br>
+            <br>
+          </div> {% endcomment %}
+          <div class="mb-3">
+            <button type="submit" class="btn btn-outline-success" style="color:rgb(238, 227, 7); background-color:rgb(0, 255, 255); border-color:rgb(238, 227, 7);"><b>Encrypt</b></button>
+            <button type="reset" class="btn btn-outline-danger" style="color:rgb(255, 0, 0); background-color:rgb(255, 255, 0); border-color:rgb(255, 0, 0);"><b>Reset</b></button>
+          </div>
+        </form>
+        {% if result %}
+        <div class="mb-3">
+            <label for="validationTextarea" class="form-label" style="color:rgb(0, 255, 255);">Encrypted Text</label><br><br>
+            <textarea class="form-control is-invalid" id="validationTextarea" placeholder="{{ result }}" style="width: 300px; height:150px;"></textarea><br>
+            <br>
+        </div>
+        {% endif %}
+     	</center>
+    </p>
+  </div>
+</div>
